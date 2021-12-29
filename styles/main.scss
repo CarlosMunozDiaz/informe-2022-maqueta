@@ -1,0 +1,105 @@
+* {
+    margin: 0 auto;
+}
+
+/* Menú superior */
+.menu {
+    position: sticky;
+    top: 0px;
+    left: 0px;
+
+    z-index: 10;
+
+    width: 100%;
+    height: 80px;
+
+    display: flex;
+    justify-content: space-between;
+    background-color: burlywood;
+
+    .menu__title {
+        width: 40%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;        
+    }
+
+    .menu__list {
+        width: 60%;
+        height: 100%;
+
+        display: flex;
+        justify-content: flex-end;
+    
+        //Elementos internos
+        .menu__link {
+            min-width: 120px;
+            width: auto;
+            height: 100%;
+            background-color: lightcoral;
+    
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+
+            cursor: pointer;
+        
+            &.active {
+                display: flex;
+                background-color: lightgreen;
+            }
+        }
+    }
+}
+
+/* Secciones informativas con respectivas cabeceras */
+.sections {
+    section {
+        width: 100%;
+        height: auto;
+        display: none;
+
+        /* Cabeceras */
+        .header {
+            &__portada {        
+                width: 100%;
+                height: 100vh;
+                background-color: rebeccapurple;
+            }
+            &__section {
+                width: 100%;
+                height: 180px;
+                background-color: rosybrown;
+            }
+        }
+        
+        /* Cuerpo */
+        .container {
+            width: 100%;
+            max-width: 768px;
+            
+            //Bloques de información (texto y visualizaciones)
+            .content {
+
+            }
+        }
+
+        //Visibilidad
+        &.visible {
+            display: block;
+        }
+    }
+}
+
+/* Footer - Compartido por todas las secciones */
+footer {
+    width: 100%;
+    height: 120px;
+    background-color: salmon;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
