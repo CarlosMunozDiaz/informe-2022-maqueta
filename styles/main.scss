@@ -163,7 +163,10 @@ body {
         .container {
             width: 100%;
             max-width: 768px;
-            margin: 0 auto;
+            margin: 0px auto;
+
+            box-sizing: border-box;
+            padding: 0 16px;
             
             //Introducción a modo de destacados
             .highlights {
@@ -275,6 +278,16 @@ footer {
 
         & .menu-icon {
             display: none;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .sections {
+        section {
+            .container {
+                padding: 0px;
+            }
         }
     }
 }

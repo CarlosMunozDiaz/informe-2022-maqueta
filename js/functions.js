@@ -21,10 +21,11 @@ function getUrlHash() {
 }
 
 function setMenuSelection(elem) {
-    let link = elem.href;
-    link = '#' + link.split("#")[1];
+    let link = elem.pathname;
+    link = '#' + link.substr(1,);
     if(link != currentHeaderSection) {
         setMenuStyles(elem, 'menu');
+        setNewHash(link);
         displaySection(link);
     }    
 }
@@ -33,8 +34,6 @@ function displaySection(path) {
     if(path == '') {
         path = '#portada';
     }
-
-    console.log(path, currentHeaderSection);
 
     //Visibilidad para la sección
     if(path != currentHeaderSection) {
@@ -62,6 +61,8 @@ function displaySection(path) {
                 document.getElementById('portada').classList.add('visible');
                 break;
         }
+
+        window.scrollTo(0,-60);
     }
     
     currentHeaderSection = path;
@@ -79,8 +80,8 @@ function setMenuStyles(elem, type) {
             link.classList.add('active');
         } else {
             for(let i = 0; i < links.length; i++) {
-                let attribute = links[i].href;
-                attribute = '#' + attribute.split("#")[1];
+                let attribute = links[i].pathname;
+                attribute = '#' + attribute.substr(1,);
                 if(elem == attribute) {
                     links[i].classList.add('active');
                 }
@@ -89,6 +90,11 @@ function setMenuStyles(elem, type) {
     } else {
         elem.classList.add('active');
     }    
+}
+
+function setNewHash(link) {
+    //Cambiar el hash existente
+    window.location.hash = link;
 }
 
 /******
