@@ -1,55 +1,131 @@
+/* Diseño mobile first */
+
 * {
     margin: 0 auto;
+    font-family: 'Roboto';
 }
 
 /* Menú superior */
-.menu {
-    position: sticky;
+.b-menu {
+    position: fixed;
     top: 0px;
-    left: 0px;
-
-    z-index: 10;
-
     width: 100%;
-    height: 80px;
 
-    display: flex;
-    justify-content: space-between;
-    background-color: burlywood;
+    background-color: #fff;
+    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);    
+    
+    z-index: 3;
 
-    .menu__title {
-        width: 40%;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;        
+    //Elementos internos
+    & a {
+        color: #000;
     }
 
-    .menu__list {
-        width: 60%;
-        height: 100%;
+    & ol {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        overflow: hidden;
+        background-color: #fff;
 
-        display: flex;
-        justify-content: flex-end;
-    
-        //Elementos internos
-        .menu__link {
-            min-width: 120px;
-            width: auto;
-            height: 100%;
-            background-color: lightcoral;
-    
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
+        & li a {
+            display: block;
+            padding: 20px 20px;
+            border-right: 1px solid #f4f4f4;
+            text-decoration: none;
 
-            cursor: pointer;
-        
+            //Elemento externo
+            &.menu__link--url {
+                background-color: red;
+            }
+    
+            &:hover {
+                background-color: #f4f4f4;
+            }
+    
             &.active {
-                display: flex;
                 background-color: lightgreen;
             }
+        }
+    }
+
+    & .logo {
+        display: block;
+        float: left;
+        font-size: 2em;
+        padding: 13px 2px 13px 16px;
+        text-decoration: none;
+    }
+
+    //Menú
+    & .menu {
+        clear: both;
+        max-height: 0;
+        transition: max-height .2s ease-out;
+    }
+
+    & .menu-icon {
+        cursor: pointer;
+
+        float: right;
+        padding: 28px 20px;
+        position: relative;
+        user-select: none;
+
+        & .navicon {
+            background: #333;
+            display: block;
+            height: 1.5px;
+            position: relative;
+            transition: background .2s ease-out;
+            width: 18px;
+
+            &:before, &:after {
+                background: #333;
+                content: '';
+                display: block;
+                height: 100%;
+                position: absolute;
+                transition: all .2s ease-out;
+                width: 100%;
+            }
+
+            &:before {
+                top: 4px;
+            }
+
+            &:after {
+                top: -4px;
+            }
+        }
+    }
+
+    & .menu-btn {
+        display: none;
+
+        &:hover {
+            background-color: #f4f4f4;
+        }
+
+        &:checked ~ .menu {
+            max-height: 336px;
+        }
+
+        &:checked ~ .menu-icon .navicon {
+            background: transparent;
+        }
+
+        &:checked ~ .menu-icon .navicon:before {
+            transform: rotate(-45deg);
+        }
+
+        &:checked ~ .menu-icon .navicon:after {
+            transform: rotate(45deg);
+        }
+
+        &:checked ~ .menu-icon:not(.steps) .navicon:before, 
+        &:checked ~ .menu-icon:not(.steps) .navicon:after {
+            top: 0px;
         }
     }
 }
@@ -102,4 +178,27 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* Cambio a sin menú de hamburguesa */
+@media (min-width: 965px) {
+    .b-menu {
+        & li {
+            float: left;
+        }
+
+        & li a {
+            padding: 20px 30px;
+        }
+
+        & .menu {
+            clear: none;
+            float: right;
+            max-height: none;
+        }
+
+        & .menu-icon {
+            display: none;
+        }
+    }
 }
