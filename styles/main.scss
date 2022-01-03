@@ -7,6 +7,7 @@ body {
     font-family: 'Roboto';
     font-weight: 400;
     font-size: 16px;
+    line-height: 1.25em;
 }
 
 /* Menú superior */
@@ -147,11 +148,13 @@ body {
             &__portada {        
                 width: 100%;
                 height: 100vh;
-                background-color: rebeccapurple;
+                margin-bottom: 48px;
+                background-color: lightseagreen;                
             }
             &__section {
                 width: 100%;
                 height: 180px;
+                margin-bottom: 48px;
                 background-color: rosybrown;
             }
         }
@@ -160,12 +163,18 @@ body {
         .container {
             width: 100%;
             max-width: 768px;
-
             margin: 0 auto;
             
+            //Introducción a modo de destacados
+            .highlights {
+                width: 100%;
+                height: 80px;
+
+                background-color: lightsteelblue;
+            }
+
             //Bloques de información (texto y visualizaciones)
             .content {
-
                 //Discrimación con el primero y el último
                 &:not(&:first-of-type, &:last-of-type) {
                     padding-bottom: 16px;
@@ -185,6 +194,9 @@ body {
                 //Elementos internos
                 .text {
                     font-size: 1em;
+                    
+                    max-width: 640px;
+                    margin: 0 auto;
                     margin-bottom: 24px;
                 }
                 .chart {
