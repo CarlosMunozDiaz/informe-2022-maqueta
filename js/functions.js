@@ -81,7 +81,8 @@ function setMenuStyles(elem, type) {
             link.classList.add('active');
         } else {
             for(let i = 0; i < links.length; i++) {
-                let attribute = elem.pathname;
+                let attribute = links[i].pathname;
+                console.log(attribute);
                 attribute = attribute.split("/")[2];
                 attribute = attribute != null ? '#' + attribute.substr(0,) : '#' + elem.pathname;
                 if(elem == attribute) {
