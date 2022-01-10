@@ -12,7 +12,6 @@ window.addEventListener("hashchange", function() {
 
 function getUrlHash() {
     let url = window.location.hash;
-    console.log(url);
     if(url == '' || urlTypes.indexOf(url)!= -1) {
         setMenuStyles(url, 'url');
         displaySection(url);
@@ -22,10 +21,7 @@ function getUrlHash() {
 }
 
 function setMenuSelection(elem) {
-    console.log(elem);
-    let link = elem.pathname;
-    console.log(link);
-    console.log(elem.hash);
+    let link = elem.href;
     link = '#' + link.substr(1,);
     if(link != currentHeaderSection) {
         setMenuStyles(elem, 'menu');
@@ -84,7 +80,7 @@ function setMenuStyles(elem, type) {
             link.classList.add('active');
         } else {
             for(let i = 0; i < links.length; i++) {
-                let attribute = links[i].pathname;
+                let attribute = links[i].href;
                 attribute = '#' + attribute.substr(1,);
                 if(elem == attribute) {
                     links[i].classList.add('active');
