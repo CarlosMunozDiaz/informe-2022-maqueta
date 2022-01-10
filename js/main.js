@@ -98,13 +98,13 @@ function percentageOfElement(el){
     if (st > lastScrollTop){
         if (perc == 20) {
             document.getElementById('header-chart').classList.add('active');
-        } else if (perc == 85) {
+        } else if (perc == 92.5) {
             document.getElementById('header-chart').classList.remove('active');
         }
     } else {
         if (perc == 20) {
             document.getElementById('header-chart').classList.remove('active');
-        } else if (perc == 85) {
+        } else if (perc == 92.5) {
             document.getElementById('header-chart').classList.add('active');
         }
     }
