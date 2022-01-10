@@ -281,7 +281,7 @@ body {
                     //Figura estática
                     #header-chart {
                         position: absolute;
-                        top: 50%;
+                        top: 0%;
                         height: 400px;
                         width: 100%;
                         max-width: 736px;
@@ -290,7 +290,6 @@ body {
                     
                     #header-chart.active {
                         position: fixed;
-                        top: 50%;
                         transform: translateY(-50%);
                     }
 
