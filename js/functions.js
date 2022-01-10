@@ -27,6 +27,7 @@ function setMenuSelection(elem) {
     link = link != undefined ? '#' + link.substr(0,) : '#' + elem.pathname.substr(1,);
     if(link != currentHeaderSection) {
         setMenuStyles(elem, 'menu');
+        document.getElementById("menu-btn").checked = false;
         setNewHash(link);
         displaySection(link);
     }    
@@ -84,7 +85,7 @@ function setMenuStyles(elem, type) {
             for(let i = 0; i < links.length; i++) {
                 let attribute = links[i].pathname;
                 let attribute2 = attribute.split("/")[2];
-                attribute2 = attribute2 != undefined ? '#' + attribute.substr(0,) : '#' + attribute.split("/")[1];
+                attribute2 = attribute2 != undefined ? '#' + attribute2.substr(0,) : '#' + attribute.split("/")[1];
                 if(elem == attribute2) {
                     links[i].classList.add('active');
                 }
