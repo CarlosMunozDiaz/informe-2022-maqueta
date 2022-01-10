@@ -17,7 +17,7 @@ let figureJs = document.getElementById('figure');
 let article = scrolly.select("article");
 let step = article.selectAll(".step");
 let scroller = scrollama();
-let lastScrollTop = 0;
+let lastScrollTop = 0, centerHeight = 0, lastHeight = 0;
 
 //SCROLLAMA
 function handleScrollamaResize() {
@@ -30,7 +30,10 @@ function handleScrollamaResize() {
     let diferencia = altoVentana - altoFlourish;
     let diferencia_2 = diferencia / 2;
 
-    figure.style("top", diferencia_2 + "px");
+    centerHeight = diferencia_2;
+    lastHeight = document.getElementById('scrolly').clientHeight - 650;
+
+    figure.style("top", centerHeight + "px");    
 
     scroller.resize();
 }
@@ -98,14 +101,18 @@ function percentageOfElement(el){
     if (st > lastScrollTop){
         if (perc == 20) {
             document.getElementById('header-chart').classList.add('active');
-        } else if (perc == 85) {
+            figure.style("top", centerHeight + "px");    
+        } else if (perc >= 84 && perc <= 86) {
             document.getElementById('header-chart').classList.remove('active');
+            figure.style("top", lastHeight + "px");    
         }
     } else {
         if (perc <= 20) {
             document.getElementById('header-chart').classList.remove('active');
-        } else if (perc == 85) {
+            figure.style("top", centerHeight + "px");    
+        } else if (perc >= 84 && perc <= 86) {
             document.getElementById('header-chart').classList.add('active');
+            figure.style("top", centerHeight + "px"); 
         }
     }
 
