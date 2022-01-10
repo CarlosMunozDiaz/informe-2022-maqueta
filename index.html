@@ -92,7 +92,38 @@
                 </div>
                 <p class="text">Este informe 'Un perfil de las personas mayores en España 2022' continúa la serie de documentos elaborados por Envejecimiento en Red con el objetivo de proporcionar una visión de conjunto de las condiciones de vida de la población de 65 y más años. Se utilizan datos de fuentes nacionales e internacionales para construir indicadores sobre la evolución demográfica, la salud y otras características económicas y sociales de esta población.</p>
                 <p class="text">Los indicadores construidos se presentan de manera divulgativa y con los menores tecnicismos posibles, sin jerarquizarlos prejuzgando su relevancia. Se han seleccionado aquellos que pueden ser calculados periódicamente, con continuidad, y que son representativos del conjunto de la población mayor. Las fuentes de datos utilizadas son organismos de confianza.</p>
-                <div class="scrollytelling"></div>
+                <div class="scrollytelling" id="scrolly">
+                    <div id="header-chart">
+                        <p class="chart" id="figure">GRÁFICO <span id="index"></span></p>
+                    </div>
+                    <article>
+                        <div class="step" data-step="1" data-scrollama-index="0">
+                            <div class="step__content">
+                                <p>STEP 1</p>
+                            </div>
+                        </div>
+                        <div class="step is-active" data-step="2" data-scrollama-index="1">
+                            <div class="step__content">
+                                <p>STEP 2</p>
+                            </div>
+                        </div>
+                        <div class="step" data-step="3" data-scrollama-index="2">
+                            <div class="step__content">
+                                <p>STEP 3</p>
+                            </div>
+                        </div>
+                        <div class="step" data-step="4" data-scrollama-index="3">
+                            <div class="step__content">
+                                <p>STEP 4</p>
+                            </div>
+                        </div>
+                        <div class="step" data-step="5" data-scrollama-index="4">
+                            <div class="step__content">
+                                <p>STEP 5</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
                 <div class="consideraciones">
                     <p class="text">Los informes de Envejecimiento en Red (ISSN 2340-566X) son un producto del Laboratorio de Envejecimiento en Red y publicados por el portal web del mismo nombre. El laboratorio forma parte del Departamento de Población del Consejo Superior de Investigaciones Científicas (CSIC). Está integrado orgánicamente en el Instituto de Economía, Geográfia y Demografía (IEGD) del Centro de Ciencias Humanas y Sociales (CCHS).</p>
                     <p class="text">Los informes son documentos elaborados con un objetivo de divulgación, abordándose cuestiones estadísticas, demográficas, sociales, sanitaria, entre otros aspectos, sobre el envejecimiento. Son elaborados por el propio equipo del portal y por profesionales especialistas de distintos campos de la Gerontología y la Geriatría.</p>
@@ -362,6 +393,10 @@
     </footer>
 
     <!-- Scripts -->
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
+    <script src="https://unpkg.com/scrollama"></script>
+
     <script src="./js/functions.js"></script>
     <script src="./js/main.js"></script>
 

@@ -12,6 +12,7 @@ window.addEventListener("hashchange", function() {
 
 function getUrlHash() {
     let url = window.location.hash;
+    console.log(url);
     if(url == '' || urlTypes.indexOf(url)!= -1) {
         setMenuStyles(url, 'url');
         displaySection(url);
@@ -21,7 +22,10 @@ function getUrlHash() {
 }
 
 function setMenuSelection(elem) {
+    console.log(elem);
     let link = elem.pathname;
+    console.log(link);
+    console.log(elem.hash);
     link = '#' + link.substr(1,);
     if(link != currentHeaderSection) {
         setMenuStyles(elem, 'menu');
