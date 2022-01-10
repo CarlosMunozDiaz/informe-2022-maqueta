@@ -56,7 +56,7 @@ function init() {
     scroller
       .setup({
         step: "#scrolly article .step",
-        offset: 0.85,
+        offset: 0.35,
         debug: false
       })
       .onStepEnter(handleStepEnter);
@@ -98,13 +98,13 @@ function percentageOfElement(el){
     if (st > lastScrollTop){
         if (perc == 20) {
             document.getElementById('header-chart').classList.add('active');
-        } else if (perc == 92.5) {
+        } else if (perc == 85) {
             document.getElementById('header-chart').classList.remove('active');
         }
     } else {
-        if (perc == 20) {
+        if (perc <= 20) {
             document.getElementById('header-chart').classList.remove('active');
-        } else if (perc == 92.5) {
+        } else if (perc == 85) {
             document.getElementById('header-chart').classList.add('active');
         }
     }

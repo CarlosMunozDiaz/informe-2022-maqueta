@@ -272,7 +272,6 @@ body {
 
                 .scrollytelling {
                     position: relative;
-                    background-color: #f3f3f3;
 
                     box-sizing: border-box;
                     padding: 16px;
@@ -281,42 +280,56 @@ body {
                     //Figura estática
                     #header-chart {
                         position: absolute;
+                        top: 0px;
                         height: 400px;
                         width: 100%;
-                        max-width: 736px;
+                        max-width: calc(100% - 32px);
                         background-color: #d3d3d3;
+
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        text-align: center;
                     }
                     
                     #header-chart.active {
                         position: fixed;
                         transform: translateY(-50%);
+                        max-width: calc(100% - 64px);
                     }
 
                     //Cards
                     article {
                         position: relative;
                         padding: 0;
-                        width: 200px;
+                        width: 100%;
+                        max-width: 320px;
                         margin: 0 auto;
 
                         .step {
                             margin: 0 auto 20px auto;
                             color: #fff;
+
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
                         }
                         
                         .step:last-child {
                             margin-bottom: 0;
                         }
                         
-                        .step.is-active p {
-                            background-color: goldenrod;
-                            color: #3b3b3b;
-                        }
-                        
-                        .step p {
+                        .step p:first-child {
                             text-align: center;
                             padding: 1rem;
-                            font-size: 1.5rem;
+                            font-size: 1.25rem;
+                            background-color: #3b3b3b;
+                        }
+
+                        .step p:last-child {
+                            text-align: center;
+                            padding: 1rem;
+                            font-size: 1rem;
                             background-color: #3b3b3b;
                         }
                     }
@@ -438,6 +451,19 @@ footer {
         section {
             .container {
                 padding: 0px;
+
+                &--home {
+                    .scrollytelling {
+                        #header-chart {
+                            width: 736px;
+                            max-width: 736px;
+                        }
+                        #header-chart.active {
+                            width: 736px;
+                            max-width: 736px;
+                        }
+                    }
+                }
             }
         }
     }
