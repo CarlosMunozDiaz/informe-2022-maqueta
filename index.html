@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>Informe 2022: El perfil de las personas mayores en España</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400&family=Playfair+Display:ital,wght@0,400;1,700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- Descargar y utilizar lo que queremos para reducir peso -->
     <link rel="stylesheet" href="./styles/reset.css"/>
     <link rel="stylesheet" href="./styles/main.css"/>
@@ -13,7 +13,7 @@
 <body>
     <!-- Tendremos un NAV compartido por todas las secciones -->
     <nav class="b-menu">
-        <a href="" class="logo">INFORMES ENR</a>
+        <a href="/" class="logo">INFORMES ENR</a>
         <input class="menu-btn" type="checkbox" id="menu-btn" />
         <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
         <ol class="menu">
@@ -21,8 +21,8 @@
             <li><a class="menu__link" href="demografia">Demografía</a></li>
             <li><a class="menu__link" href="salud">Salud</a></li>
             <li><a class="menu__link" href="economia">Economía</a></li>
-            <li><a class="menu__link" href="social">Social y otros</a></li>
-            <li><a class="menu__link--url" href="">Otros informes</a></li>
+            <li><a class="menu__link" href="social">Social</a></li>
+            <li><a class="menu__link--url" href="https://envejecimientoenred.es/informes/" target="_blank">Otros informes</a></li>
         </ol>
     </nav>
 
@@ -31,22 +31,73 @@
         <!-- HOME > Cabecera grande con animaciones y scrollytelling en el interior -->
         <section id="portada">
             <header class="header__portada">
-                <h2></h2>
-            </header>
-            <article class="header__content">
-                <div class="intro">
-                    <div class="authors"></div>
-                    <p class="office"></p>
-                    <div class="summary"></div>
-                    <div class="keywords"></div>
-                    <p class="cite"></p>
+                <div class="header__portada--title">
+                    <h1>Un perfil de las personas mayores en España 2020</h1>
+                    <h2>Indicadores estadísticos básicos</h2>
                 </div>
-                <p class="text"></p>
+                
+            </header>
+            <article class="container container--home">
+                <div class="intro">
+                    <div class="authors">
+                        <div class="author">
+                            <p class="author--name">Julio Pérez Díaz</p>
+                            <p class="author--email">xxxx@cchs.csic.es</p>
+                        </div>
+                        <div class="author">
+                            <p class="author--name">Joaquín Osorio Arjona</p>
+                            <p class="author--email">xxxx@cchs.csic.es</p>
+                        </div>
+                        <div class="author">
+                            <p class="author--name">Sebastaan Ruiz-Santacruz</p>
+                            <p class="author--email">xxxx@cchs.csic.es</p>
+                        </div>
+                        <div class="author">
+                            <p class="author--name">Carlos Muñoz Díaz</p>
+                            <p class="author--email">xxxx@cchs.csic.es</p>
+                        </div>
+                        <div class="author">
+                            <p class="author--name">Pilar Aceituno Nieto</p>
+                            <p class="author--email">xxxx@cchs.csic.es</p>
+                        </div>
+                        <div class="author">
+                            <p class="author--name">Diego Ramiro Fariñas</p>
+                            <p class="author--email">xxxx@cchs.csic.es</p>
+                        </div>
+                    </div>
+                    <p class="office">Consejo Superior de Investigaciones Científicas (CSIC), Centro de Ciencias Humanas y Sociales (CCHS). Envejecimiento en Red.</p>
+                    <div class="summary">
+                        <p>Resumen</p>
+                        <p>Este informe presenta una serie de indicadores demográficos, de salud, económicos y sociales que proporcionan una visión general de la situación, características y comportamientos de las personas mayores en España, así como de los cambios que han experimentado en los últimos años.</p>
+                    </div>
+                    <div class="keywords">
+                        <p>Palabras clave</p>
+                        <p>Personas mayores, datos estadísticos, indicadores, España, demografía, salud, pensiones, hogares.</p>
+                    </div>
+                    <div class="issn">
+                        <p>ISSN:</p>
+                        <p>2340-566X</p>
+                    </div>
+                    <div class="cite">
+                        <p>Cita del informe digital:</p>
+                        <p>PÉREZ DÍAZ, Julio; OSORIO ARJONA, Joaquín; RUIZ-SANTACRUZ, Sebastian; MUÑOZ DÍAZ, Carlos; ACEITUNO NIETO, Pilar; RAMIRO FARIÑAS, Diego. (2022). 'Un perfil de las personas mayores en España, 2022. Indicadores estadísticas básicos'. Madrid, Informe Envejecimiento en Red nº XX. [Fecha de publicación: XX/XX/2020]. Disponible en http://carlosmunozdiaz.github.io/informe-2022-maqueta</p>
+                    </div>
+                    <div class="cite">
+                        <p>Cita del informe físico:</p>
+                        <p>PÉREZ DÍAZ, Julio; OSORIO ARJONA, Joaquín; RUIZ-SANTACRUZ, Sebastian; MUÑOZ DÍAZ, Carlos; ACEITUNO NIETO, Pilar; RAMIRO FARIÑAS, Diego. (2022). 'Un perfil de las personas mayores en España, 2022. Indicadores estadísticas básicos'. Madrid, Informe Envejecimiento en Red nº XX, 45p. [Fecha de publicación: XX/XX/2020]. Disponible en http://carlosmunozdiaz.github.io/informe-2022-maqueta.pdf</p>
+                    </div>
+                    <div class="share">
+                        <p>Compartir el informe en redes sociales:</p>
+                    </div>
+                </div>
+                <p class="text">Este informe 'Un perfil de las personas mayores en España 2022' continúa la serie de documentos elaborados por Envejecimiento en Red con el objetivo de proporcionar una visión de conjunto de las condiciones de vida de la población de 65 y más años. Se utilizan datos de fuentes nacionales e internacionales para construir indicadores sobre la evolución demográfica, la salud y otras características económicas y sociales de esta población.</p>
+                <p class="text">Los indicadores construidos se presentan de manera divulgativa y con los menores tecnicismos posibles, sin jerarquizarlos prejuzgando su relevancia. Se han seleccionado aquellos que pueden ser calculados periódicamente, con continuidad, y que son representativos del conjunto de la población mayor. Las fuentes de datos utilizadas son organismos de confianza.</p>
                 <div class="scrollytelling"></div>
                 <div class="consideraciones">
-                    <h2></h2>
-                    <p></p>
-                    <p></p>
+                    <p class="text">Los informes de Envejecimiento en Red (ISSN 2340-566X) son un producto del Laboratorio de Envejecimiento en Red y publicados por el portal web del mismo nombre. El laboratorio forma parte del Departamento de Población del Consejo Superior de Investigaciones Científicas (CSIC). Está integrado orgánicamente en el Instituto de Economía, Geográfia y Demografía (IEGD) del Centro de Ciencias Humanas y Sociales (CCHS).</p>
+                    <p class="text">Los informes son documentos elaborados con un objetivo de divulgación, abordándose cuestiones estadísticas, demográficas, sociales, sanitaria, entre otros aspectos, sobre el envejecimiento. Son elaborados por el propio equipo del portal y por profesionales especialistas de distintos campos de la Gerontología y la Geriatría.</p>
+                    <p class="text">La serie se inicia en 2013 sin periodicidad fija, inspirada en los informes Portal Mayores (2003-2012). Son gratuitos y se presentan en forma digital y físico (en pdf). El portal de Envejecimiento en Red no se responsabiliza de las opiniones vertidas por los autores de estos informes. Es obligatorio citar la procedencia en cualquier reproducción total o parcial que se haga de los mismos.</p>
+                    <p class="text">Esta obra está bajo una licencia Creative Commons Atribución-CompartirIgual 3.0 Unported</p>
                 </div>
             </article>
         </section>
@@ -56,10 +107,8 @@
             <header class="header__section">
                 <h2>INDICADORES DEMOGRÁFICOS</h2>
             </header>
-            <article class="container">
-                <div class="highlights">
-
-                </div>
+            <article class="container container--section">
+                <div class="highlights">Los indicadores demográficos reflejan la estructura de la población por sexo y edades, permitiendo una comparativa geográfica xxx. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dolor ante, vulputate mollis placerat nec, placerat a lorem. Maecenas iaculis mollis lectus, quis volutpat felis vestibulum sed. Nunc dignissim orci imperdiet leo rutrum, vel blandit justo ultrices. Proin condimentum est vitae ex pulvinar consequat. Aliquam in turpis eu risus euismod consectetur eget ac nisi.</div>
                 <div class="content">
                     <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget porttitor ligula, in efficitur ipsum. Mauris quis arcu ut nunc posuere gravida nec vel magna. Donec ac faucibus lorem. Sed est leo, pretium ac ornare eget, laoreet ut risus. In sagittis magna id dui aliquam, commodo tincidunt mi mollis. Nunc ornare euismod lectus vitae facilisis. Aliquam erat volutpat. Curabitur a tincidunt mi. Praesent et rhoncus velit.</p>
                     <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget porttitor ligula, in efficitur ipsum. Mauris quis arcu ut nunc posuere gravida nec vel magna. Donec ac faucibus lorem. Sed est leo, pretium ac ornare eget, laoreet ut risus. In sagittis magna id dui aliquam, commodo tincidunt mi mollis. Nunc ornare euismod lectus vitae facilisis. Aliquam erat volutpat. Curabitur a tincidunt mi. Praesent et rhoncus velit.</p>
@@ -120,12 +169,10 @@
         <!-- INDICADORES DE SALUD (APARTADO 2) -->
         <section id="salud">
             <header class="header__section">
-                <h2>ESPERANZA DE VIDA Y ESTADO DE SALUD</h2>
+                <h2>INDICADORES DE SALUD</h2>
             </header>
-            <article class="container">
-                <div class="highlights">
-
-                </div>
+            <article class="container container--section">
+                <div class="highlights">Los indicadores de salud reflejan la evolución de la esperanza de vida, la morbilidad o cómo está falleciendo la población mayor xxx. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dolor ante, vulputate mollis placerat nec, placerat a lorem. Maecenas iaculis mollis lectus, quis volutpat felis vestibulum sed. Nunc dignissim orci imperdiet leo rutrum, vel blandit justo ultrices. Proin condimentum est vitae ex pulvinar consequat. Aliquam in turpis eu risus euismod consectetur eget ac nisi.</div>
                 <div class="content">
                     <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget porttitor ligula, in efficitur ipsum. Mauris quis arcu ut nunc posuere gravida nec vel magna. Donec ac faucibus lorem. Sed est leo, pretium ac ornare eget, laoreet ut risus. In sagittis magna id dui aliquam, commodo tincidunt mi mollis. Nunc ornare euismod lectus vitae facilisis. Aliquam erat volutpat. Curabitur a tincidunt mi. Praesent et rhoncus velit.</p>
                     <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget porttitor ligula, in efficitur ipsum. Mauris quis arcu ut nunc posuere gravida nec vel magna. Donec ac faucibus lorem. Sed est leo, pretium ac ornare eget, laoreet ut risus. In sagittis magna id dui aliquam, commodo tincidunt mi mollis. Nunc ornare euismod lectus vitae facilisis. Aliquam erat volutpat. Curabitur a tincidunt mi. Praesent et rhoncus velit.</p>
@@ -170,12 +217,11 @@
                     <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget porttitor ligula, in efficitur ipsum. Mauris quis arcu ut nunc posuere gravida nec vel magna. Donec ac faucibus lorem. Sed est leo, pretium ac ornare eget, laoreet ut risus. In sagittis magna id dui aliquam, commodo tincidunt mi mollis. Nunc ornare euismod lectus vitae facilisis. Aliquam erat volutpat. Curabitur a tincidunt mi. Praesent et rhoncus velit.</p>
                     <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget porttitor ligula, in efficitur ipsum. Mauris quis arcu ut nunc posuere gravida nec vel magna. Donec ac faucibus lorem. Sed est leo, pretium ac ornare eget, laoreet ut risus. In sagittis magna id dui aliquam, commodo tincidunt mi mollis. Nunc ornare euismod lectus vitae facilisis. Aliquam erat volutpat. Curabitur a tincidunt mi. Praesent et rhoncus velit.</p>
                     <div class="chart" id="viz_2_10"></div>
-                    <div class="chart" id="viz_2_11"></div>
                 </div>
                 <div class="content">
                     <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget porttitor ligula, in efficitur ipsum. Mauris quis arcu ut nunc posuere gravida nec vel magna. Donec ac faucibus lorem. Sed est leo, pretium ac ornare eget, laoreet ut risus. In sagittis magna id dui aliquam, commodo tincidunt mi mollis. Nunc ornare euismod lectus vitae facilisis. Aliquam erat volutpat. Curabitur a tincidunt mi. Praesent et rhoncus velit.</p>
                     <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget porttitor ligula, in efficitur ipsum. Mauris quis arcu ut nunc posuere gravida nec vel magna. Donec ac faucibus lorem. Sed est leo, pretium ac ornare eget, laoreet ut risus. In sagittis magna id dui aliquam, commodo tincidunt mi mollis. Nunc ornare euismod lectus vitae facilisis. Aliquam erat volutpat. Curabitur a tincidunt mi. Praesent et rhoncus velit.</p>
-                    <div class="chart" id="viz_2_12"></div>
+                    <div class="chart" id="viz_2_11"></div>
                 </div>
             </article>
         </section>
@@ -183,12 +229,10 @@
         <!-- INDICADORES ECONÓMICOS (APARTADO 3) -->
         <section id="economia">
             <header class="header__section">
-                <h2>CARACTERÍSTICAS ECONÓMICAS</h2>
+                <h2>INDICADORES ECONÓMICOS</h2>
             </header>
-            <article class="container">
-                <div class="highlights">
-
-                </div>
+            <article class="container container--section">
+                <div class="highlights">En este apartado se mide la capacidad económica de la población mayor xxx. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dolor ante, vulputate mollis placerat nec, placerat a lorem. Maecenas iaculis mollis lectus, quis volutpat felis vestibulum sed. Nunc dignissim orci imperdiet leo rutrum, vel blandit justo ultrices. Proin condimentum est vitae ex pulvinar consequat. Aliquam in turpis eu risus euismod consectetur eget ac nisi.</div>
                 <div class="content">
                     <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget porttitor ligula, in efficitur ipsum. Mauris quis arcu ut nunc posuere gravida nec vel magna. Donec ac faucibus lorem. Sed est leo, pretium ac ornare eget, laoreet ut risus. In sagittis magna id dui aliquam, commodo tincidunt mi mollis. Nunc ornare euismod lectus vitae facilisis. Aliquam erat volutpat. Curabitur a tincidunt mi. Praesent et rhoncus velit.</p>
                     <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget porttitor ligula, in efficitur ipsum. Mauris quis arcu ut nunc posuere gravida nec vel magna. Donec ac faucibus lorem. Sed est leo, pretium ac ornare eget, laoreet ut risus. In sagittis magna id dui aliquam, commodo tincidunt mi mollis. Nunc ornare euismod lectus vitae facilisis. Aliquam erat volutpat. Curabitur a tincidunt mi. Praesent et rhoncus velit.</p>
@@ -239,12 +283,10 @@
         <!-- INDICADORES SOCIALES Y OTROS (APARTADO 4)-->
         <section id="social">
             <header class="header__section">
-                <h2>CARACTERÍSTICAS SOCIALES Y OTRAS</h2>
+                <h2>INDICADORES SOCIALES</h2>
             </header>
-            <article class="container">
-                <div class="highlights">
-
-                </div>
+            <article class="container container--section">
+                <div class="highlights">El envecimiento activo es uno de los propósitos de la OMS xxx. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dolor ante, vulputate mollis placerat nec, placerat a lorem. Maecenas iaculis mollis lectus, quis volutpat felis vestibulum sed. Nunc dignissim orci imperdiet leo rutrum, vel blandit justo ultrices. Proin condimentum est vitae ex pulvinar consequat. Aliquam in turpis eu risus euismod consectetur eget ac nisi.</div>
                 <div class="content">
                     <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget porttitor ligula, in efficitur ipsum. Mauris quis arcu ut nunc posuere gravida nec vel magna. Donec ac faucibus lorem. Sed est leo, pretium ac ornare eget, laoreet ut risus. In sagittis magna id dui aliquam, commodo tincidunt mi mollis. Nunc ornare euismod lectus vitae facilisis. Aliquam erat volutpat. Curabitur a tincidunt mi. Praesent et rhoncus velit.</p>
                     <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget porttitor ligula, in efficitur ipsum. Mauris quis arcu ut nunc posuere gravida nec vel magna. Donec ac faucibus lorem. Sed est leo, pretium ac ornare eget, laoreet ut risus. In sagittis magna id dui aliquam, commodo tincidunt mi mollis. Nunc ornare euismod lectus vitae facilisis. Aliquam erat volutpat. Curabitur a tincidunt mi. Praesent et rhoncus velit.</p>
@@ -350,7 +392,6 @@
         new pym.Parent('viz_2_9', 'https://carlosmunozdiaz.github.io/informe-2022-viz/?chart=2_9&iframe=responsive', {trackscroll: true});
         new pym.Parent('viz_2_10', 'https://carlosmunozdiaz.github.io/informe-2022-viz/?chart=2_10&iframe=responsive', {trackscroll: true});
         new pym.Parent('viz_2_11', 'https://carlosmunozdiaz.github.io/informe-2022-viz/?chart=2_11&iframe=responsive', {trackscroll: true});
-        new pym.Parent('viz_2_12', 'https://carlosmunozdiaz.github.io/informe-2022-viz/?chart=2_12&iframe=responsive', {trackscroll: true});
 
         /* Economía */
         new pym.Parent('viz_3_1', 'https://carlosmunozdiaz.github.io/informe-2022-viz/?chart=3_1&iframe=responsive', {trackscroll: true});

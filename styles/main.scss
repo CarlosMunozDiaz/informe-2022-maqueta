@@ -32,16 +32,16 @@ body {
         list-style: none;
         overflow: hidden;
         background-color: #fff;
+        color: #000;
 
         & li a {
             display: block;
             padding: 20px 20px;
-            border-right: 1px solid #f4f4f4;
             text-decoration: none;
 
             //Elemento externo
             &.menu__link--url {
-                background-color: red;
+                background-color: #F08080;
             }
     
             &:hover {
@@ -49,15 +49,17 @@ body {
             }
     
             &.active {
-                background-color: lightgreen;
+                background-color: #4e7e7e;
+                color: #fff;
             }
         }
     }
 
     & .logo {
+        font-family: 'Playfair Display', sans-serif;
         display: block;
         float: left;
-        font-size: 2em;
+        font-size: 1.6em;
         padding: 20px 2px 20px 16px;
         text-decoration: none;
     }
@@ -113,7 +115,7 @@ body {
         }
 
         &:checked ~ .menu {
-            max-height: 336px;
+            max-height: 360px;
         }
 
         &:checked ~ .menu-icon .navicon {
@@ -149,13 +151,58 @@ body {
                 width: 100%;
                 height: 100vh;
                 margin-bottom: 48px;
-                background-color: lightseagreen;                
+                background-color: #4e7e7e;
+                
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-content: center;
+
+                text-align: center;
+
+                &--title {
+                    width: 100%;
+                    max-width: 1080px;
+                    margin: 0 auto;
+
+                    h1 {
+                        font-family: 'Playfair Display', serif;
+                        font-size: 72px;
+                        font-weight: 700;
+                        line-height: 1.1em;
+                        color: #fff;
+    
+                        margin-bottom: 32px;
+                    }
+    
+                    h2 {
+                        font-family: 'Playfair Display', serif;
+                        font-size: 48px;
+                        font-weight: 700;
+                        line-height: 1.1em;
+                        color: #fff;
+                    }
+                }                
             }
             &__section {
                 width: 100%;
-                height: 180px;
+                height: auto;
+                min-height: 280px;
                 margin-bottom: 48px;
-                background-color: rosybrown;
+                background-color: #4e7e7e;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                //Disposición del título
+                h2 {
+                    font-family: 'Playfair Display', serif;
+                    font-size: 40px;
+                    font-weight: 700;
+                    line-height: 1.1em;
+                    color: #fff;
+                }
             }
         }
         
@@ -167,45 +214,124 @@ body {
 
             box-sizing: border-box;
             padding: 0 16px;
-            
-            //Introducción a modo de destacados
-            .highlights {
-                width: 100%;
-                height: 80px;
 
-                background-color: lightsteelblue;
-            }
+            ////
+            ////Elementos de la portada
+            ////
+            &--home {
+                .intro {
+                    .authors, .office, .summary, .keywords, .issn, .cite, .share {
+                        margin-bottom: 24px;
+                    }
 
-            //Bloques de información (texto y visualizaciones)
-            .content {
-                //Discrimación con el primero y el último
-                &:not(&:first-of-type, &:last-of-type) {
-                    padding-bottom: 16px;
-                    margin-top: 32px;
+                    .summary, .keywords, .issn, .cite {
+                        :first-child {
+                            font-weight: 700;
+                            margin-bottom: 4px;
+                        }
+                    }
 
-                    border-bottom: 1px solid;
+                    .authors {
+                        .author {
+                            :last-child {
+                                color: #4e7e7e;
+                            }
+                            margin-bottom: 12px;
+                        }
+                    }
+
+                    .office {
+                    }
+
+                    .summary {
+
+                    }
+
+                    .issn {
+
+                    }
+
+                    .keywords {
+
+                    }
+
+                    .cite {
+
+                    }
+
+                    .share {
+
+                    }
+
+                    //Estilos de la caja
+                    box-sizing: border-box;
+                    padding: 16px;
+                    border: 1px solid;
+                    margin-bottom: 48px;
                 }
-                &:first-of-type {
-                    padding-bottom: 16px;
 
-                    border-bottom: 1px solid;
+                .scrollytelling {
+                    width: 100%;
+                    height: 1600px;
+                    margin-bottom: 24px;
+
+                    background-color: #cecece;
                 }
-                &:last-of-type {
-                    margin-top: 32px;
-                }
-                
-                //Elementos internos
+
                 .text {
                     font-size: 1em;
-                    
+                        
                     max-width: 640px;
                     margin: 0 auto;
                     margin-bottom: 24px;
                 }
-                .chart {
-                    margin-bottom: 16px;
-                }
             }
+
+            ////
+            ////Elementos de secciones
+            ////
+            &--section {
+                //Introducción a modo de destacados
+                .highlights {
+                    width: 100%;
+
+                    box-sizing: border-box;
+                    padding: 8px;
+                    
+                    background-color: lightsteelblue;
+                }
+
+                //Bloques de información (texto y visualizaciones)
+                .content {
+                    //Discrimación con el primero y el último
+                    &:not(&:first-of-type, &:last-of-type) {
+                        padding-bottom: 16px;
+                        margin-top: 32px;
+
+                        border-bottom: 1px solid;
+                    }
+                    &:first-of-type {
+                        padding-bottom: 16px;
+
+                        border-bottom: 1px solid;
+                    }
+                    &:last-of-type {
+                        margin-top: 32px;
+                    }
+                    
+                    //Elementos internos
+                    .text {
+                        font-size: 1em;
+                        
+                        max-width: 640px;
+                        margin: 0 auto;
+                        margin-bottom: 24px;
+                    }
+                    .chart {
+                        margin-bottom: 16px;
+                    }
+                }
+            }            
         }
 
         //Visibilidad
@@ -233,6 +359,10 @@ footer {
 
     //Elementos internos
     .footer__icons {
+        width: 110px;
+        display: flex;
+        justify-content: space-between;
+        
         .fa {
             padding: 12px;
             font-size: 24px;
@@ -259,6 +389,16 @@ footer {
     
 }
 
+@media (min-width: 768px) {
+    .sections {
+        section {
+            .container {
+                padding: 0px;
+            }
+        }
+    }
+}
+
 /* Cambio a sin menú de hamburguesa */
 @media (min-width: 965px) {
     .b-menu {
@@ -278,16 +418,6 @@ footer {
 
         & .menu-icon {
             display: none;
-        }
-    }
-}
-
-@media (min-width: 768px) {
-    .sections {
-        section {
-            .container {
-                padding: 0px;
-            }
         }
     }
 }
