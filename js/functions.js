@@ -21,7 +21,8 @@ function getUrlHash() {
 }
 
 function setMenuSelection(elem) {
-    let link = elem.href;
+    let link = elem.pathname;
+    link = link.split("/")[1];
     link = '#' + link.substr(1,);
     if(link != currentHeaderSection) {
         setMenuStyles(elem, 'menu');
@@ -80,7 +81,8 @@ function setMenuStyles(elem, type) {
             link.classList.add('active');
         } else {
             for(let i = 0; i < links.length; i++) {
-                let attribute = links[i].href;
+                let attribute = elem.pathname;
+                attribute = attribute.split("/")[1];
                 attribute = '#' + attribute.substr(1,);
                 if(elem == attribute) {
                     links[i].classList.add('active');
