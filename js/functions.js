@@ -23,7 +23,6 @@ function getUrlHash() {
 function setMenuSelection(elem) {
     let link = elem.pathname;
     link = link.split("/")[2];
-    console.log(link);
     link = link != undefined ? '#' + link.substr(0,) : '#' + elem.pathname.substr(1,);
     if(link != currentHeaderSection) {
         setMenuStyles(elem, 'menu');

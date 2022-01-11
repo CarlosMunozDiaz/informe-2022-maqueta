@@ -276,7 +276,6 @@ body {
 
                     box-sizing: border-box;
                     padding: 16px;
-                    margin-bottom: 24px;
 
                     //Figura estática
                     #header-chart {
@@ -314,6 +313,10 @@ body {
                             display: flex;
                             flex-direction: column;
                             justify-content: center;
+
+                            &--invisible {
+                                visibility: hidden;
+                            }
                         }
                         
                         .step:last-child {

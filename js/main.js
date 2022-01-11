@@ -43,8 +43,13 @@ function handleStepEnter(response) {
         return i === response.index;
     });
 
-    let iframe = document.getElementById('index');
-    iframe.textContent = response.index + 1;
+    if (response.index == 0) {
+        setChart(response.index + 1);
+    } else if (response.index == 6) {
+        setChart(response.index - 1);
+    } else {
+        setChart(response.index);
+    }    
 }
 
 function handleOwnResize() {
@@ -59,7 +64,7 @@ function init() {
     scroller
       .setup({
         step: "#scrolly article .step",
-        offset: 0.35,
+        offset: 0.8,
         debug: false
       })
       .onStepEnter(handleStepEnter);
@@ -68,9 +73,7 @@ function init() {
     window.addEventListener("resize", function() {
       handleOwnResize();
       handleScrollamaResize();    
-    });
-
-    
+    });    
 }
 
 // kick things off
@@ -99,7 +102,7 @@ function percentageOfElement(el){
     let st = window.pageYOffset || document.documentElement.scrollTop;
 
     if (st > lastScrollTop){
-        if (perc == 20) {
+        if (perc == 15) {
             document.getElementById('header-chart').classList.add('active');
             figure.style("top", centerHeight + "px");    
         } else if (perc >= 84 && perc <= 86) {
@@ -107,7 +110,7 @@ function percentageOfElement(el){
             figure.style("top", lastHeight + "px");    
         }
     } else {
-        if (perc <= 20) {
+        if (perc <= 15) {
             document.getElementById('header-chart').classList.remove('active');
             figure.style("top", centerHeight + "px");    
         } else if (perc >= 84 && perc <= 86) {
@@ -123,5 +126,7 @@ window.addEventListener('scroll', function() {
   handleStepEnter2();
 });
 
-
-
+function setChart(index) {
+    let iframe = document.getElementById('index');
+    iframe.textContent = index;
+}
